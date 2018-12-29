@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jednoręki Bandyta moje rozwiązanie</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            text-decoration:none;
+            list-style-type:none;
+        }
+        body {
+            font-family:'arial';
+            font-size: 10px;
+            line-height: 1.7;
+            color:black;
+            scroll-behavior: smooth;
+        }
+        .wrap{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            width:100vw;
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:space-evenly;
+            flex-direction: column;
+        }
+        .game{
+            display:flex;
+            justify-content: space-evenly;
+            width:40%;
+            height:40vh;
+        }
+        .game_color{
+            background-color: transparent;
+            border: 1px solid black;
+            width:30%;
+            
+        }
+        .score{
+            font-size: 2rem;
+        }
+        .score span{
+            text-transform: uppercase;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Jednoreki bandyta</h1>
+        <section class="game">
+            <div class="game_color panelA"></div>
+            <div class="game_color panelB"></div>
+            <div class="game_color panelC"></div>
+        </section>
+        <section class="play">
+            <input id="bid" type="number" placeholder="Podaj stawkę">
+            <button id="start">zakręć</button>
+        </section>
+        <section class="panel">
+            <h1>Twoje środki przed kolejną grą to: <span class="wallet" id="wallet"></span></h1>
+        </section>
+        <section class="score">
+            <span class="result"></span> Za tobą <span class="games_number"></span> gier, w tym <span class="loose_games"></span>
+            przegranych oraz
+            <span class="won_games"></span> wygranych.
+        </section>
+    </div>
+    <script src="Panel.js"></script>
+    <script src="Wallet.js"></script>
+    <script src="Result.js"></script>
+    <script src="Statistics.js"></script>
+    <script src="Game.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
